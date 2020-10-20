@@ -5,11 +5,9 @@ Home: https://github.com/celery/django-celery-beat
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/django-celery-beat-feedstock/blob/master/LICENSE.txt)
 
 Summary: Database-backed Periodic Tasks.
-
-
 
 Current build status
 ====================
