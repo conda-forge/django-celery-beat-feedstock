@@ -18,13 +18,15 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - celery
+    - celery >=5.0,<6.0
     - django >=1.11.17
-    - django-timezone-field >=4.0,<5.0
-    - python
+    - django-timezone-field >=4.1.0,<5.0
+    - python >=3.6
     - python-crontab >=2.3.4
+
+python-crontab>=2.3.4
 
 test:
   imports:
