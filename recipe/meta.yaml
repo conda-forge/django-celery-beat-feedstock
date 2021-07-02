@@ -25,9 +25,7 @@ requirements:
     - django-timezone-field >=4.1.0,<5.0
     - python >=3.6
     - python-crontab >=2.3.4
-
-python-crontab>=2.3.4
-
+    
 test:
   imports:
     - django_celery_beat
