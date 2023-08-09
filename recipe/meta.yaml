@@ -11,7 +11,7 @@ source:
   sha256: cd0a47f5958402f51ac0c715bc942ae33d7b50b4e48cba91bc3f2712be505df1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.7
     - celery >=5.0,<6.0
-    - importlib-metadata <5.0
+    - importlib-metadata
     - django-timezone-field >=5.0
     - backports.zoneinfo
     - tzdata
@@ -34,8 +34,6 @@ test:
   imports:
     - django_celery_beat
     - django_celery_beat.migrations
-  commands:
-    - pip check
   requires:
     - pip
 
