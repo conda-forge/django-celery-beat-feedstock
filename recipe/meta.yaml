@@ -1,5 +1,5 @@
 {% set name = "django-celery-beat" %}
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd0a47f5958402f51ac0c715bc942ae33d7b50b4e48cba91bc3f2712be505df1
+  sha256: f75b2d129731f1214be8383e18fae6bfeacdb55dffb2116ce849222c0106f9ad
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
