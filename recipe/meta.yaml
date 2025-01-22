@@ -7,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 8482034925e09b698c05ad61c36ed2a8dbc436724a3fe119215193a4ca6dc967
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - celery >=5.2.3,<6.0
     - importlib-metadata
     - django-timezone-field >=5.0
@@ -36,6 +36,7 @@ test:
     - django_celery_beat.migrations
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/celery/django-celery-beat
