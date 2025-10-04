@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   name: django-celery-beat
-  version: 2.8.1
+  version: "2.8.1"
 
 package:
   name: ${{ name|lower }}
@@ -23,7 +24,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<4.0
     - celery >=5.2.3,<6.0
     - importlib-metadata
     - django-timezone-field >=5.0
@@ -39,12 +40,7 @@ tests:
         - django_celery_beat
         - django_celery_beat.migrations
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      pip_check: true
 
 about:
   summary: Database-backed Periodic Tasks.
