@@ -14,7 +14,7 @@ source:
   sha256: 92404650f52fcb44cf08e2b09635cb1558327c54b1a5d570f0e2d3a22130934c
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -32,7 +32,6 @@ requirements:
     - python-crontab >=2.3.4
     - cron-descriptor >=1.2.32,<2.0.0
     - django >=2.2,<6.1
-    - pytest
     - kombu
 tests:
   - python:
